@@ -87,7 +87,7 @@ def gerarNuvemDePalavrasPorArquivo(arqsTxt):
         text = open(os.path.join(d, nomeArq)).read()
 
         # Generate a word cloud image
-        wordcloud = WordCloud(width=1200, height=600, background_color="white", repeat=False, collocations=False)
+        wordcloud = WordCloud(width=1200, height=600, background_color="white", repeat=False, collocations=False, min_word_length=2)
         wordcloud.generate(text)
         wordcloud.to_file(nomePng)
 
@@ -95,4 +95,4 @@ if __name__ == "__main__":
     arqs = arqsFromFolder('PLAN')
     madeTextFromArqs(arqs)
     arqsTxt = arqsFromFolder('TEXT')
-    gerarNuvemDePalavrasPorArquivo(arqsTxt)
+    gerarNuvemDePalavrasPorArquivo(arqsTxt) 
