@@ -95,4 +95,4 @@ if __name__ == "__main__":
     arqs = arqsFromFolder('PLAN')
     madeTextFromArqs(arqs)
     arqsTxt = arqsFromFolder('TEXT')
-    gerarNuvemDePalavrasPorArquivo(arqsTxt) 
+    gerarNuvemDePalavrasPorArquivo(arqsTxt)  
